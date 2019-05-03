@@ -1,7 +1,7 @@
 #ifndef HOLE_H
 #define HOLE_H
-#include<QString>
-
+#include<string>
+using std::string;
 class hole
 {
 public:
@@ -12,8 +12,8 @@ public:
     int get_endAdress();
     void set_StartingAddress(int StartingAddress);
     int get_StartingAddress();
-    void set_name( QString name);
-    QString get_name();
+    void set_name(string name);
+    string get_name();
     void set_flag( int flag);
     int get_flag();
 private:
@@ -21,7 +21,7 @@ private:
     int flag;
     int endAdress;
     int StartingAddress;
-    QString name;
+     string name;
 
 };
 
