@@ -8,6 +8,7 @@
 int first_fit(list <hole> &memory, int * sizelist, string * namelist,int NumberOFSgemnts,int ProcessNumber){
 
     list <hole> copy;
+
     int i = 0;
 
     copy = memory;
@@ -41,7 +42,7 @@ for(i ; i < NumberOFSgemnts; i++){
     if(it == copy.end())
         break;
 }   
-
+    //if it loops over all the segments it mean they were successfully fitted
     if(i == NumberOFSgemnts)
         return 1;
 
