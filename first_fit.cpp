@@ -32,7 +32,7 @@ for(i ; i < NumberOFSgemnts; i++){
             h.set_StartingAddress(it->get_endAdress());
             h.set_endAdress(temp_endAdress);
 
-            list<hole>::iterator it2 = copy.begin() //define a new iterator to insert a hole
+            list<hole>::iterator it2 = copy.begin(); //define a new iterator to insert a hole
             count++;
             advance(it2,count);
             copy.insert(it2,h);
