@@ -33,3 +33,5 @@ for (list<hole>::iterator it = list1.begin();it != list1.end();it++)
 iterator like pointer we have to dereferecne it to get its values ;
 to dereferance the iterator we use (*it).get_name() for example or it->get_name() 
 }
+
+
