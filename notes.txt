@@ -1,0 +1,42 @@
+flag : -1  means that it is an old process and it isn't allowed to allocate on it untill user deallocate it.
+flag : 0 means that it is a free part 
+flag :  any number for example 8 ,  means that this parts is allocated for segment of process 8 
+
+name : should be set to the name of incommming segment 
+
+to use Stl list you should use #include<list>
+
+to insernt in stl list , you should use iterator to list and the value that we want to insert :
+example :
+we have list of 3 items 2 2 2 
+list <int> list1; 
+list<int>::iterator it = list1.begin(); 
+we want to insert 5 in the third postition
+we have to make the iterator poing to the begin of list , then use advance finction with the iterator to make it point to the third postion which means index 2 
+dvance(it,2);
+list1.insert(it,5); 
+list after insertion 
+2 2 5 2
+
+so for our case if we want to insert in the third position :
+
+list<hole> list1;
+hole H1;
+list<hole>::iterator it = list1.begin();
+dvance(it,2); 
+list1.insert(it,H1); 
+
+also iteration can be used to traverse the list 
+
+for (list<hole>::iterator it = list1.begin();it != list1.end();it++)
+{
+iterator like pointer we have to dereferecne it to get its values ;
+to dereferance the iterator we use (*it).get_name() for example or it->get_name() 
+}
+
+
+
+
+
+
+
