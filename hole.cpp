@@ -1,5 +1,6 @@
     #include "hole.h"
 
+
 hole::hole()
 {
 }
@@ -23,10 +24,11 @@ void hole ::set_StartingAddress(int StartingAddress)
 int  hole ::get_StartingAddress(){
     return this->StartingAddress;
 }
-void hole ::set_name( QString name){
+void hole ::set_name(string name)
+{
     this->name=name;
 }
-QString  hole ::get_name(){
+string hole ::get_name(){
     return name;
 }
 void hole ::set_flag( int flag){
