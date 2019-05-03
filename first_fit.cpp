@@ -41,12 +41,12 @@ for(i ; i < NumberOFSgemnts; i++){
     }
     if(it == copy.end())
         break;
-}   
+  }   
     //if it loops over all the segments it mean they were successfully fitted
     if(i == NumberOFSgemnts)
         return 1;
 
     else
         return -1;
-    
+}    
 
