@@ -48,9 +48,10 @@ for(i ; i < NumberOFSgemnts; i++){
         break;
   }   
     //if it loops over all the segments it mean they were successfully fitted
-    if(i == NumberOFSgemnts)
+    if(i == NumberOFSgemnts){
+        memory = copy;
         return 1;
-
+    }
     else
         return -1;
 }    
