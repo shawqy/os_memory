@@ -110,7 +110,7 @@ copyMemory.sort(hole_size);
 for(int i=0;i<NumberOFSegments;i++)
 {
     
-    int allocated_flag=0;
+    int allocated_flag=0,insert_flag=0;
     int current_endAddress,current_id;
     string hole_name;
     
@@ -194,34 +194,53 @@ for(int i=0;i<NumberOFSegments;i++)
         for(myit=copyMemory.begin();myit!=copyMemory.end();myit++)
         {
     
+    insert_flag=0;
+    
             
             for(myitMemory=memory.begin();myitMemory!=memory.end();myitMemory++)
             {
+                
+                
                 
                 //loop till you find the hole with the same starting address
                 if(myit->get_StartingAddress() == myitMemory->get_StartingAddress())
                 {
                     
                     //Copy the info from the hole to the memory even if it is not adjusted
-                    myitMemory->set_endAdress(myit->get_endAdress());
                     myitMemory->set_ID(myit->get_ID());
                     myitMemory->set_name(myit->get_name());
                     myitMemory->set_flag(myit->get_flag());
+                    
+
+                if(myit->get_endAdress() != myitMemory->get_endAdress() )
+                    {
+                        insert_flag=1;
+                    }
+                    
+                    
+
+                    myitMemory->set_endAdress(myit->get_endAdress());
+
+
+
+
+                if(flag==1)
+                {
+                    
+                    myitMemory++;
+                    myit++;
+                    
+                 memory.insert(myitMemory,(*myit));
+
+                }
+                    
+                    
+                    
                     
                     //we find the hole no need to continue for this hole
                     break;
                 }
                 
-                //if another hole is added
-                else if(myitMemory->get_flag()==0)
-                {
-                    
-                    memory.insert(myitMemory,(*myit));
-                    
-                    //no need to continue we already found the hole place 
-                    break;
-                    
-                }
                 
                 
             }
