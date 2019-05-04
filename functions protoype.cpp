@@ -1,4 +1,4 @@
-
+#include <list>
 int first_fit(list <hole> &memory, int * sizelist, string * namelist,int NumberOFSgemnts,int ProcessNumber);
 //sizelist is a dynamic array of segments sizes of . its size equal to NumberOFSgemnts
 // namelist is a dynamic array of segments names 
