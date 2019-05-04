@@ -37,7 +37,7 @@ for(i ; i < NumberOFSgemnts; i++){
 
     WorstHole = get_the_largest_hole_in_the_list (copy);
     for (list<hole>::iterator it = copy.begin();it != copy.end();it++){
-       // el id equal el id
+       // el id equal el id of worsthole
         if(it->get_id() == WorstHole){
             
             // w lazm at2kd enha fadya mfhash 7aga
