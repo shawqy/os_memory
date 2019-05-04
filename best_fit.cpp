@@ -10,7 +10,7 @@ int best_fit(list <hole> &memory, int * sizelist, string * namelist,int NumberOF
     {
         
         if((*myit).get_flag()==0)
-                copyMemory.push_back(*myit);
+            copyMemory.push_back(*myit);
         
     }
 
@@ -105,13 +105,8 @@ for(int i=0;i<NumberOFSegments;i++)
 
         /*Copy the state of the copyMemory to the RealMemory*/
         for(myit=copyMemory.begin();myit!=copyMemory.end();myit++)
-        {
-    
-            
-            
-            
-            
-            
+        {  
+          memory.push_back(*myit);   
         }
     
         /********/
